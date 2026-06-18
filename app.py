@@ -13,6 +13,40 @@ import streamlit as st
 # ──────────────────────────────────────────────────────────────────────────────
 
 st.set_page_config(page_title="BoboGears Demand Forecast", page_icon="📦", layout="wide")
+
+# ─── Colour theme (Navy / Teal / Sky Blue / Beige) ────────────────────────────
+st.markdown("""
+<style>
+    /* palette: navy #2F4156, teal #567C8D, sky #C8D9E6, beige #F5EFEB */
+    .stApp { background-color: #FFFFFF; }
+    h1, h2, h3 { color: #2F4156 !important; font-family: Georgia, serif; }
+    .stCaption, .st-emotion-cache-1rsyhoq { color: #567C8D; }
+
+    /* primary buttons */
+    .stButton > button, .stDownloadButton > button {
+        background-color: #2F4156; color: #FFFFFF;
+        border: none; border-radius: 8px; font-weight: 600;
+    }
+    .stButton > button:hover, .stDownloadButton > button:hover {
+        background-color: #567C8D; color: #FFFFFF;
+    }
+
+    /* sidebar in beige */
+    section[data-testid="stSidebar"] { background-color: #F5EFEB; }
+
+    /* info / success boxes tinted to palette */
+    .stAlert { border-radius: 8px; }
+
+    /* metric accent */
+    div[data-testid="stMetricValue"] { color: #567C8D; }
+
+    /* uploaders with sky-blue dashed border */
+    section[data-testid="stFileUploaderDropzone"] {
+        background-color: #F5EFEB; border: 2px dashed #C8D9E6;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 st.title("📦 BoboGears Demand Forecast")
 st.caption("Upload your Blinkit reports, pick the warehouses to restock, and get order quantities.")
 

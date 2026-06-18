@@ -1,0 +1,8 @@
+.env
+.vscode/
+__pycache__/
+*.pyc
+InventoryData.xlsx
+order_recommendations.xlsx
+limits_template.xlsx
+order_scanner.html
